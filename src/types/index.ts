@@ -33,7 +33,7 @@ export interface PatternStrength {
 export interface SocialSentiment {
   score: number;
   volume: number;
-  trend: 'positive' | 'negative' | 'neutral';
+  trend: "positive" | "negative" | "neutral";
   keywords?: string[];
 }
 
@@ -125,8 +125,8 @@ export interface BettingOpportunity {
 
 export interface UltimateAIConfig {
   investment: number;
-  dataSource: 'real' | 'hybrid' | 'simulation';
-  strategy: 'maximum' | 'conservative' | 'aggressive' | 'real_time';
+  dataSource: "real" | "hybrid" | "simulation";
+  strategy: "maximum" | "conservative" | "aggressive" | "real_time";
   confidence: number;
   portfolio: string;
   sports: string;
@@ -141,4 +141,11 @@ export interface PatternRecognition {
 export interface TeamColors {
   gradient: string;
   accent: string;
+}
+
+export interface SportConfig {
+  id: string;
+  name: string;
+  emoji: string;
+  displayName: string;
 }
