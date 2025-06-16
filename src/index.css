@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-morphism {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  }
+  
+  .dark .glass-morphism {
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .ultimate-btn {
+    background: linear-gradient(135deg, #FFD700 0%, #FF6B35 50%, #5D5CDE 100%);
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+  
+  .prop-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .prop-card:hover {
+    transform: translateY(-4px) scale(1.02);
+  }
+  
+  @keyframes glow {
+    from { 
+      box-shadow: 0 0 20px rgba(93, 92, 222, 0.4); 
+    } 
+    to { 
+      box-shadow: 0 0 40px rgba(93, 92, 222, 0.8); 
+    }
+  }
+  
+  @keyframes fadeIn { 
+    from { 
+      opacity: 0; 
+      transform: translateY(20px); 
+    } 
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    } 
+  }
+  
+  @keyframes slideUp { 
+    from { 
+      opacity: 0; 
+      transform: translateY(10px); 
+    } 
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    } 
+  }
+  
+  @keyframes scaleIn { 
+    from { 
+      opacity: 0; 
+      transform: scale(0.95); 
+    } 
+    to { 
+      opacity: 1; 
+      transform: scale(1); 
+    } 
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.2s ease-out;
+  }
+}
+
+/* Ensure inputs work properly on mobile */
+input[type="number"], select {
+  font-size: 16px !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #6b7280;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
